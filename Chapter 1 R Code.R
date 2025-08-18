@@ -1,4 +1,5 @@
 install.packages("TSA")
+install.packages("tseries")
 
 ####### 1.1.1 ANNUAL RAINFALL IN L.A. ####
 
@@ -42,6 +43,7 @@ Unemployment Rate", ylab="Unemployment Rate")
 ####### 1.1.4 Dow Jones ####
 
 # Do data look dependent from month to month?
+# the [[2]] below tells R to only look at the second column in the txt file
 DJIA = ts(read.table("DJIA.txt")[[2]],frequency = 12,
           start = c(1896, 6))
 plot(x=zlag(DJIA),y=DJIA ,xlab="Prev Month DJIA", ylab="DJIA")

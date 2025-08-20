@@ -12,3 +12,12 @@ plot(x,y)
 abline(h = 0, v = 0)
 plot(x,y2)
 abline(h = 0, v = 0)
+
+e = rnorm(20)
+y = cumsum(e)
+plot(y, ylim = c(-10,10), type = "b")
+
+while(T){plot(cumsum(rnorm(20)), ylim = c(-10,10), type = "b")
+  readline()
+  }
+

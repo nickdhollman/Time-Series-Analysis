@@ -20,7 +20,7 @@ plot(y, ylim = c(-10,10), type = "b")
 while(T){plot(cumsum(rnorm(20)), ylim = c(-10,10), type = "b")
   readline()
   }
-
+# hit escape in console to stop loop
 y = arima.sim(list(ma = 0.5), n = 100)
 plot(y)
 
